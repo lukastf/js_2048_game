@@ -30,7 +30,7 @@ function updateBoard() {
   game.getState().forEach((row) => {
     const newRow = document.createElement('tr');
 
-    newRow.classList.add('game-field');
+    // newRow.classList.add('game-field');
 
     row.forEach((cell) => {
       const newCell = document.createElement('td');
