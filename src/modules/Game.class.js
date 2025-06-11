@@ -117,10 +117,14 @@ class Game {
     let transposed = this.transpose(this.state);
 
     transposed = transposed.map((line) => {
-      return this.merge(this.compress(line.reverse()));
+      return this.merge(this.compress(line.reverse())).reverse();
     });
 
-    this.state = this.transpose(transposed).reverse();
+    /* transposed = transposed.map((line) => {
+      return this.merge(this.compress(line.reverse()));
+    }); */
+
+    this.state = this.transpose(transposed);
 
     if (!this.areBoardMoves(prev, this.state)) {
       this.addRandomTile();
